@@ -6,6 +6,7 @@
   font-weight: 500;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+  color: #212121;
 }
 
 .main-container {
@@ -57,7 +58,6 @@
   position: absolute;
   bottom: calc(var(--avatar-size) + var(--cared-size) + 4px);
   width: 100%;
-  max-height: 104px;
   padding: 12px;
   font-weight: 400;
   font-size: .85rem;
@@ -88,4 +88,57 @@
 
 .card-outlined .card-content {
   margin: 10px 0 24px 0;
+}
+
+.card-splited {
+  --border-radius: 32px;
+  --avatar-size: 220px;
+  --star-size: 18px;
+  display: flex;
+  gap: 12px;
+}
+
+.card-splited .avatar {
+  height: var(--avatar-size);
+  aspect-ratio: 1/1;
+  border-radius: var(--border-radius);
+}
+
+.card-splited .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  padding: 12px 24px;
+  background-color: #212121;
+  color: #fafafa;
+  border-radius: var(--border-radius);
+}
+
+.card-splited .card-body .rank {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 8px 0;
+}
+
+.card-splited .card-body .rank svg {
+  fill: #fdd835;
+  width: var(--star-size);
+  height: var(--star-size);
+}
+
+.card-splited .card-body .name {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0 0 4px 0;
+}
+
+.card-splited .card-body .role {
+  color: #757575
+}
+
+.card-splited .card-body .content {
+  margin: 16px 0 0 0;
+  font-size: 1.1rem;
+  font-weight: 400;
 }

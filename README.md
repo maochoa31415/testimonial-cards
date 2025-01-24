@@ -6,3 +6,8 @@ Projecy for roadmap.sh.
 ## Use
 
 Open `index.html` file.
+
+The images have been taken from:
+
+    - [https://vuetifyjs.com/en/components/avatars/#default](https://vuetifyjs.com/en/components/avatars/#default)
+    - [https://avatar.iran.liara.run](https://avatar.iran.liara.run)

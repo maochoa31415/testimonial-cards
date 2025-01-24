@@ -15,10 +15,10 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  height: 100vh;
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
+  padding: 200px 0 24px 0;
 }
 
 /* Card width floating content */
@@ -141,4 +141,76 @@
   margin: 16px 0 0 0;
   font-size: 1.1rem;
   font-weight: 400;
+}
+
+.card-big {
+  --avatar-size: 82px;
+  --buttons-size: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  border-radius: 32px;
+  border: solid 2px #212121;
+}
+
+.card-big .card-content {
+  font-size: 1.2rem;
+  margin: 0 0 48px 0;
+}
+
+.card-big .avatars-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.card-big .avatars-container .avatars {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.card-big .avatars-container .avatars .avatar:not(.current) {
+  height: var(--avatar-size);
+  border-radius: 50%;
+  opacity: .4;
+  aspect-ratio: 1/1;
+}
+
+.card-big .avatars-container .avatars .avatar.current {
+  height: calc(var(--avatar-size) + 32px);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.card-big .avatars-container .name {
+  margin: 0;
+  font-weight: 400;
+}
+
+.card-big .avatars-container .avatars [class*="btn-"] svg {
+  fill: currentColor;
+}
+
+.card-big .avatars-container .avatars [class*="btn-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--buttons-size);
+  height: var(--buttons-size);
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #424242;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.card-big .avatars-container .avatars [class*="btn-"]:hover {
+  background-color: #e0e0e0;
 }

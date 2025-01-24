@@ -1,6 +1,6 @@
 # testimonial-cards
 
-Projecy for roadmap.sh.
+Project for roadmap.sh.
 [https://roadmap.sh/projects/testimonial-cards](https://roadmap.sh/projects/testimonial-cards)
 
 ## Use

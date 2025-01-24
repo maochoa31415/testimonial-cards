@@ -1,0 +1,91 @@
+:root {
+  --avatar-size: 64px;
+
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.main-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 100vh;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* Card width floating content */
+.card-floating {
+  --cared-size: 10px;
+  --content-color: #212121;
+  position: relative;
+  width: max-content;
+}
+
+.card-outlined .card-body,
+.card-floating .card-body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-outlined .card-body .avatar,
+.card-floating .card-body .avatar {
+  height: var(--avatar-size);
+  border-radius: var(--avatar-size);
+  aspect-ratio: 1/1;
+}
+
+.card-outlined .card-body .card-description,
+.card-floating .card-body .card-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-outlined .card-body .card-description .role,
+.card-floating .card-body .card-description .role {
+  font-size: .75rem;
+}
+
+.card-floating .card-content {
+  position: absolute;
+  bottom: calc(var(--avatar-size) + var(--cared-size) + 4px);
+  width: 100%;
+  max-height: 104px;
+  padding: 12px;
+  font-weight: 400;
+  font-size: .85rem;
+  border-radius: 18px;
+  background-color: var(--content-color);
+  color: #fafafa;
+}
+
+.card-floating .card-content::before {
+  content: "";
+  position: absolute;
+  bottom: calc(var(--cared-size) * -1);
+  left: calc(var(--avatar-size) / 2);
+  width: 0;
+  height: 0;
+  border-left: var(--cared-size) solid transparent;
+  border-right: var(--cared-size) solid transparent;
+  border-top: var(--cared-size) solid var(--content-color);
+  transform: translateX(-50%);
+}
+
+.card-outlined {
+  padding: 10px 18px;
+  max-width: 256px;
+  border: solid 2px #212121;
+  border-radius: 18px;
+}
+
+.card-outlined .card-content {
+  margin: 10px 0 24px 0;
+}
